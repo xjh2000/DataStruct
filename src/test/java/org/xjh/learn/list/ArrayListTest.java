@@ -1,16 +1,18 @@
 package org.xjh.learn.list;
 
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class LinkListTest {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class ArrayListTest {
 
-    private static final List<Integer> list = new LinkList<>();
-
-
+    private final static List<Integer> list = new ArrayList<>();
+    
     @Test
     @Order(0)
     void add() {
@@ -39,26 +41,26 @@ class LinkListTest {
     }
 
     @Test()
-    @Order(31)
+    @Order(40)
     void testGet() {
         assertEquals(3, list.get(Integer.valueOf(5)));
     }
 
     @Test
-    @Order(40)
+    @Order(50)
     void size() {
         assertEquals(4, list.size());
     }
 
     @Test
-    @Order(50)
+    @Order(60)
     void clear() {
         list.clear();
     }
 
 
     @Test
-    @Order(51)
+    @Order(70)
     void isEmpty() {
         assertTrue(list.isEmpty());
     }

@@ -1,37 +1,40 @@
 package org.xjh.learn.list;
 
-public interface List<T> {
+public interface List<E> {
 
     /**
      * 在链表尾部添加元素
      *
-     * @param t 添加元素
+     * @param e 添加元素
      */
-    void add(T t);
+    void add(E e);
 
     /**
      * 在链表指定位置添加元素
      *
      * @param index 指定位置
-     * @param t     添加元素
+     * @param e     添加元素
+     * @throws IndexOutOfBoundsException 如果指定位置不合法
      */
-    void add(int index, T t);
+    void add(int index, E e);
 
     /**
      * 获取链表指定位置的元素
      *
      * @param index 指定位置
      * @return 返回指定位置的元素
+     * @throws IndexOutOfBoundsException 如果指定位置越界
      */
-    T get(int index);
+    E get(int index);
 
     /**
      * 获取链表指定元素的位置
      *
-     * @param t 指定元素
-     * @return 返回指定元素的索引
+     * @param e 指定元素
+     * @return 返回指定元素的索引 不存在返回-1
+     * @apiNote 如果链表中存在多个相同元素，返回第一个元素的索引
      */
-    int get(T t);
+    int get(E e);
 
     /**
      * 删除链表指定位置的元素
@@ -39,7 +42,7 @@ public interface List<T> {
      * @param index 指定位置
      * @return 返回指定位置的元素
      */
-    T remove(int index);
+    E remove(int index);
 
     /**
      * 获取链表的元素个数
