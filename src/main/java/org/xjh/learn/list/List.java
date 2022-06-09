@@ -32,7 +32,7 @@ public interface List<E> {
      *
      * @param e 指定元素
      * @return 返回指定元素的索引 不存在返回-1
-     * @apiNote 如果链表中存在多个相同元素，返回第一个元素的索引
+     * @implNote 如果链表中存在多个相同元素，返回第一个元素的索引
      */
     int get(E e);
 

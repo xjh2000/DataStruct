@@ -22,6 +22,8 @@ public class ArrayList<E> implements List<E> {
 
 
     /**
+     * 缩小容量
+     *
      * @implNote 无边界检查，需要调用方检测
      */
     private void shrink() {
